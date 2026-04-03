@@ -1,7 +1,28 @@
 {
   "name": "@getstage/agent-mode",
-  "private": true,
-  "version": "0.1.0",
-  "type": "module",
-  "license": "MIT"
+  "version": "1.0.0",
+  "description": "Stage agent mode — create and manage creative projects, link Stitch design workspaces, and sync preview screens from any AI agent",
+  "license": "MIT",
+  "author": "GetStage <hello@getstage.co>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/getstage/agent-mode"
+  },
+  "homepage": "https://getstage.co/agents",
+  "keywords": [
+    "agent-mode",
+    "ai-agent",
+    "project-management",
+    "stitch",
+    "design",
+    "claude",
+    "cursor",
+    "windsurf",
+    "codex",
+    "mcp",
+    "skills"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }

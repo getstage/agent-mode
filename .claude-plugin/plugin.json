@@ -1,0 +1,12 @@
+{
+  "name": "stage-project-manager",
+  "description": "Create and manage creative projects in Stage, link Stitch design workspaces, and sync the latest preview screens — all via the Stage REST API",
+  "version": "1.0.0",
+  "author": {
+    "name": "GetStage",
+    "url": "https://getstage.co"
+  },
+  "repository": "https://github.com/getstage/agent-mode",
+  "license": "MIT",
+  "homepage": "https://getstage.co/agents"
+}

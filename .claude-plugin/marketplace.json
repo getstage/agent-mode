@@ -1,0 +1,37 @@
+{
+  "name": "stage-project-manager",
+  "owner": {
+    "name": "GetStage",
+    "email": "hello@getstage.co"
+  },
+  "metadata": {
+    "description": "Create and manage creative projects, link Stitch design workspaces, and sync preview screens from any AI agent",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "stage-project-manager",
+      "source": "./",
+      "description": "Create and manage creative projects in Stage, link Stitch design workspaces, and sync the latest preview screens — all via the Stage REST API",
+      "version": "1.0.0",
+      "author": {
+        "name": "GetStage"
+      },
+      "homepage": "https://getstage.co/agents",
+      "repository": "https://github.com/getstage/agent-mode",
+      "license": "MIT",
+      "keywords": [
+        "project-management",
+        "design",
+        "stitch",
+        "creative",
+        "ai-agent",
+        "mcp",
+        "claude",
+        "cursor"
+      ],
+      "category": "project-management",
+      "strict": true
+    }
+  ]
+}
