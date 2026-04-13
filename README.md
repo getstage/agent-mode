@@ -1,6 +1,6 @@
 # Stage Agent Mode
 
-Create and manage creative projects from any AI agent. Set up the full project plan, link your Stitch design workspace, and sync the latest preview screens — all through natural language.
+Create and manage creative projects from any AI agent. Set up the full project plan, run research and strategy workflows, generate deliverables, and send outputs through Claude-connected tools such as Notion or Figma while Stage stays the source of truth.
 
 ## Install
 
@@ -36,6 +36,11 @@ The skill teaches your agent how to:
 
 - **Create full projects** — phases, tasks, timeline, budget, client name
 - **Read project status** — list projects, check progress, view tasks
+- **Run research flows** — save context, create runs, and persist research artifacts
+- **Run strategy flows** — generate sections and keep approval state in Stage
+- **Run generate flows** — create outputs and keep export history in Stage
+- **Handshake Claude with Stage** — verify the Claude connection from the setup page
+- **Export through Claude** — send outputs to Notion or Figma and record the result back in Stage
 - **Link Stitch projects** — connect a Google Stitch design workspace to a Stage project
 - **Sync design previews** — pull the latest screens from Stitch into Stage
 - **Follow safety rules** — read/create/update/destructive action policy built in
@@ -60,8 +65,9 @@ Stage is the executor. Your agent is the interpreter.
 2. The agent reads the skill file and understands Stage's API
 3. The agent builds a structured API call
 4. Stage validates, stores, and returns data
+5. Claude uses connected tools only when needed and writes the result back into Stage
 
-Stage never calls LLMs. It authenticates, validates, and executes.
+Stage is the operating system and source of truth. Claude is the reasoning layer and operator.
 
 ## Action policy
 
@@ -104,6 +110,19 @@ GET    /api/v1/projects/:id/design-connections
 POST   /api/v1/projects/:id/designs/upload-url
 POST   /api/v1/projects/:id/designs/sync
 GET    /api/v1/projects/:id/designs
+```
+
+### Claude and AI workflow
+
+```
+POST   /api/v1/agent/connections/claude/handshake
+GET    /api/v1/projects/:id/ai/context
+POST   /api/v1/projects/:id/ai/context
+GET    /api/v1/projects/:id/ai/runs
+POST   /api/v1/projects/:id/ai/runs
+GET    /api/v1/projects/:id/ai/artifacts
+POST   /api/v1/projects/:id/ai/artifacts
+POST   /api/v1/ai/artifacts/:id/exports
 ```
 
 ## Supported clients
